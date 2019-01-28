@@ -84,7 +84,7 @@ Foreach-Object {
 
         #then assign the path of the file to the Path variable
 
-    $Path = $_.FullName
+    $Path = $_.FullName blah blah blah
 
         #and find the position of the * which indicates where the release order is. 
 
@@ -120,7 +120,7 @@ $Scripts = $Scripts.GetEnumerator() | sort -Property value
 
     #for each row in the hash table...
 
-ForEach ($d in $Scripts)
+ForEach ($d in $Scripts) blah
 {
 
 try
@@ -131,11 +131,12 @@ try
 
     if (($Rollback -eq 'True' -and $d.Key -like '*rollback*') -or ($Rollback -eq 'False' -and $d.Key -notlike '*rollback*'))
     {
-        if ($Test-eq 'True')
+
         {
             Add-Content $LogFileNameFull ($d.Key + " - Not Run")
         }
         else
+		asdfasdfdsf
         {
             if ($env:USERNAME -eq 'DBA')
                 {$InstanceName = "DESKTOP-CGRB0T0\LIVE" }
